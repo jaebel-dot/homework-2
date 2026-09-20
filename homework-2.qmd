@@ -6,7 +6,14 @@ editor: visual
 
 ## Question 1
 
+```{r}
+#| eval: false
 
+install.packages("aRtsy")
+
+```
+
+install.packages installs the package to your device, whereas the library function tells R to use the specific package in the code below the library function
 
 
 \newpage
