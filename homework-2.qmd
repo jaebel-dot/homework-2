@@ -1,0 +1,22 @@
+---
+title: "Homework-2"
+format: pdf
+editor: visual
+---
+
+## Question 1
+
+
+
+
+\newpage
+
+## Question 2
+
+\newpage
+
+## Question 3
+
+\newpage
+
+## Question 4
