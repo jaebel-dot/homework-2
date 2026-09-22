@@ -4,6 +4,7 @@ format: pdf
 editor: visual
 ---
 
+
 ## Question 1
 
 ```{r}
@@ -17,8 +18,23 @@ install.packages installs the package to your device, whereas the library functi
 
 
 \newpage
+# Packages
 
 ## Question 2
+
+```{r}
+library(aRtsy)
+```
+
+The Collatz conjecture is a famous unsolved math problem that asks whether two simple arithmetic operations will eventually transform every positive integer into 1. If the number is even, you divide by 2, and if the number is odd, you multiple by 3 and add 1. 
+
+
+
+
+$$f(x) = \begin{cases} \frac{n}{2} & \text{if } n \text{ is even} \\ 3n + 1 & \text{if } n \text{ is odd} \end{cases} $$
+
+
+
 
 \newpage
 
