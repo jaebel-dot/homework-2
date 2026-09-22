@@ -40,6 +40,37 @@ $$f(x) = \begin{cases} \frac{n}{2} & \text{if } n \text{ is even} \\ 3n + 1 & \t
 
 ## Question 3
 
+
+```{r}
+#| eval: false
+
+canvas_collatz(
+  colors = c("blue"),
+  n = 10
+)
+```
+
+The above code is uses the canvas_collatz function from the artsy package. It  generates artwork based on the Collatz conjecture by calculating the starting paths for 10 randomly chosen starting integers. It plots these fractal paths on a canvas using the designated color. 
+
+### part  b
+
+You get a different output every time because the code runs based off of 10 randomly generated integers. Since these 10 numbers change each time, every time you render this into a quarto file, it would show a different graph.
+
+
+By setting the seed through the set.seed function, we can choose how the random numbers are generated through the canvas_collatz function.
+
+```{r}
+set.seed(329386292)
+
+canvas_collatz(
+  colors = c("blue"),
+  n = 10)
+```
+
+
+
 \newpage
 
 ## Question 4
+
+
