@@ -4,6 +4,8 @@ format: pdf
 editor: visual
 ---
 
+# Packages
+
 
 ## Question 1
 
@@ -18,7 +20,7 @@ install.packages installs the package to your device, whereas the library functi
 
 
 \newpage
-# Packages
+
 
 ## Question 2
 
@@ -26,12 +28,7 @@ install.packages installs the package to your device, whereas the library functi
 library(aRtsy)
 ```
 
-The Collatz conjecture is a famous unsolved math problem that asks whether two simple arithmetic operations will eventually transform every positive integer into 1. If the number is even, you divide by 2, and if the number is odd, you multiple by 3 and add 1. 
-
-
-
-
-$$f(x) = \begin{cases} \frac{n}{2} & \text{if } n \text{ is even} \\ 3n + 1 & \text{if } n \text{ is odd} \end{cases} $$
+The Collatz conjecture is a famous unsolved math problem that asks whether two simple arithmetic operations will eventually transform every positive integer into 1.  If the number $n$ is even, you divide by 2, written as $f(n) = n/2$. If the number $n$ is odd, you multiply by 3 and add 1, written as $f(n) = 3n + 1$.
 
 
 
@@ -40,6 +37,7 @@ $$f(x) = \begin{cases} \frac{n}{2} & \text{if } n \text{ is even} \\ 3n + 1 & \t
 
 ## Question 3
 
+#### part a
 
 ```{r}
 #| eval: false
@@ -52,12 +50,12 @@ canvas_collatz(
 
 The above code is uses the canvas_collatz function from the artsy package. It  generates artwork based on the Collatz conjecture by calculating the starting paths for 10 randomly chosen starting integers. It plots these fractal paths on a canvas using the designated color. 
 
-### part  b
+#### part  b
 
-You get a different output every time because the code runs based off of 10 randomly generated integers. Since these 10 numbers change each time, every time you render this into a quarto file, it would show a different graph.
+You get a different output every time because the code runs based off of 10 randomly generated integers. Since these 10 numbers change each time, every time you render this into a quarto file, it shows show a different graph.
 
 
-By setting the seed through the set.seed function, we can choose how the random numbers are generated through the canvas_collatz function.
+Set.seed() sets the seed for R's psuedo-random number generator. By setting a specific seed before running a function that picks random integers, R will generate the exact same sequence of psuedo-random numbers each time, ensuring that the output will be replicable across multiple renders. 
 
 ```{r}
 set.seed(329386292)
@@ -74,3 +72,13 @@ canvas_collatz(
 ## Question 4
 
 
+```{r}
+canvas_collatz(
+  colors = c("blue"),
+  n = 1:20
+)
+```
+
+This code is different than the previous code because it takes 20 specified integers instead of 10 random ones. This code chunk shows the graph of how the Collatz conjecture for the first 20 integers. 
+
+It would not be appropriate to use set.seed(1) in this code chuck because this code chunk evaluates the function for a set vector of 20 numbers without any random integers.
